@@ -40,6 +40,10 @@ class Boite:
         longueur = float(input("Entrer la longueur on centimetre de la boite : "))
         largeur = float(input("Entrer la largeur on centimetre de la boite : "))
         return [longueur, largeur]
+        
+    #Calculer aire boite
+    def airboite(self):
+        return self.longueur * self.largeur
     
     #Afficher info class
     def __str__(self):
