@@ -64,16 +64,21 @@ def menu():
         if choix == "1" :
             attribut_pizza = pizza.creerpizza()
             liste_pizza.append(Pizza(attribut_pizza[0], attribut_pizza[1], attribut_pizza[2]))
+
         elif choix == "2" :
             attribut_boite = boite.creerboite()
             liste_boite.append(Boite(attribut_boite[0], attribut_boite[1]))
+
         elif choix == "3" :
             for pizza in liste_pizza:
                 print(pizza)
+
         elif choix == "4" :
             for boite in liste_boite:
                 print(boite)
+
         elif choix == "5" :
+
              # Afficher la liste des pizzas
             print("\nVoici les pizzas disponibles ")
             for index, value in enumerate(liste_pizza):
@@ -107,7 +112,31 @@ def menu():
                 print("Vous avez fait un bon choix !!")
             
         elif choix == "6" :
-            pass
+
+             print("\nVoici les pizzas disponibles ")
+            # Afficher la liste des pizzas
+            for index, value in enumerate(liste_pizza):
+                print(f"\t{index + 1}.  {value}")
+
+            print("\nVoici les boites disponibles ")
+            # Afficher la liste des boites
+            for index, value in enumerate(liste_boite):
+                print(f"\t{index + 1}.  {value}")
+
+            # Demander a l'utilisateur de choisir un pizza et une boite
+            pizza_choisi = int(input("\nChoisisez un pizza : "))
+            boite_choisi = int(input("Choisisez une boite : "))
+
+            # Reperer le pizza et la boite dans la liste
+            pizza_embaler = liste_pizza[pizza_choisi-1]
+            boite_embaler = liste_boite[boite_choisi-1]
+            # print(boite_embaler.largeur)
+            # print((pizza_embaler.rayon)*2.54)
+
+            if ((pizza_embaler.rayon)* 2.54) < boite_embaler.largeur:
+                print("On peut emballer votre pizza ")
+            else:
+                print("Désolé ! On ne peut pas emballer votre pizza ")
 
         else:
             condition = False
