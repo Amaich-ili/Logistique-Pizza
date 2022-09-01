@@ -35,7 +35,7 @@ class Boite:
         self.largeur = largeur
 
     #Creer des objets
-    def creerboite():
+    def creerboite(self):
         longueur = float(input("Entrer la longueur on centimetre de la boite : "))
         largeur = float(input("Entrer la largeur on centimetre de la boite : "))
         return [longueur, largeur]
@@ -113,7 +113,7 @@ def menu():
             
         elif choix == "6" :
 
-             print("\nVoici les pizzas disponibles ")
+            print("\nVoici les pizzas disponibles ")
             # Afficher la liste des pizzas
             for index, value in enumerate(liste_pizza):
                 print(f"\t{index + 1}.  {value}")
@@ -134,9 +134,9 @@ def menu():
             # print((pizza_embaler.rayon)*2.54)
 
             if ((pizza_embaler.rayon)* 2.54) < boite_embaler.largeur:
-                print("On peut emballer votre pizza ")
+                print("\nOn peut emballer votre pizza ")
             else:
-                print("Désolé ! On ne peut pas emballer votre pizza ")
+                print("\nDésolé ! On ne peut pas emballer votre pizza ")
 
         else:
             condition = False
