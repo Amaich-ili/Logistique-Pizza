@@ -56,7 +56,7 @@ def menu():
     condition = True
 
     while condition:
-        choix = input("\n[1] Créer une nouvelle pizza \n[2] Créer une nouvelle boîte \n[3] Voir la liste de pizzas \n[4] Voir la liste de boîtes \n[5] Comparer spécial 2 pour 1 \n[6] Mettre une pizza dans une boîte\nVotre choix : \n")
+        choix = input("\n[1] Créer une nouvelle pizza \n[2] Créer une nouvelle boîte \n[3] Voir la liste de pizzas \n[4] Voir la liste de boîtes \n[5] Comparer spécial 2 pour 1 \n[6] Mettre une pizza dans une boîte\nVotre choix : ")
         
         if choix == "1" :
             attribut_pizza = Pizza.creerpizza()
@@ -126,7 +126,10 @@ def menu():
             pizza_embaler = liste_pizza[pizza_choisi-1]
             boite_embaler = liste_boite[boite_choisi-1]
 
-            if ((pizza_embaler.rayon)* 2.54) < boite_embaler.largeur:
+            # Determine la petite valeur entre par l'utilisateur
+            minimum_valeur = min(boite_embaler.largeur, boite_embaler.longueur )
+
+            if ((pizza_embaler.rayon)* 2.54) < minimum_valeur:
                 print("\nOn peut emballer votre pizza ")
             else:
                 print("\nDésolé ! On ne peut pas emballer votre pizza ")
