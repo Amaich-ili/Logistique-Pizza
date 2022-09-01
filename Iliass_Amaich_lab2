@@ -7,6 +7,10 @@ class Pizza:
         self.rayon = rayon
         self.diametre = diametre
         self.cout = cout
+    
+    
+    def __str__(self):
+        return (f"Pizza : {(self.diametre)}'' -> {(self.cout)} $")
 
 
 
@@ -17,3 +21,6 @@ class Boite:
     def __init__(self, longueur = 0.0, largeur = 0.0) -> None:
         self.longueur = longueur
         self.largeur = largeur
+
+     def __str__(self):
+        return (f"Boite : {self.airboite()} cm")
