@@ -15,6 +15,6 @@ On doit demander à l'utilisateur de créer des pizzas selon le diamètre et le 
 ### Étape 2:
 On affiche les pizzas et les boites 
 ### Étape 3:
-On affiche le choix de l’utilisateur par rapport le spécial.
+On affiche le choix de l’utilisateur par rapport le spécial (2 pour 1).
 ### Étape 4:
-On détermine si la pizza choisie peut être emballer ou non dépend de la boite choisi
+On détermine si la pizza choisie peut être emballer ou non dépend de la boite choisie.
