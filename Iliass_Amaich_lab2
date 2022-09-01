@@ -126,7 +126,7 @@ def menu():
             pizza_embaler = liste_pizza[pizza_choisi-1]
             boite_embaler = liste_boite[boite_choisi-1]
 
-            # Determine la petite valeur entre par l'utilisateur
+            # Determine la petite valeur entrer par l'utilisateur
             minimum_valeur = min(boite_embaler.largeur, boite_embaler.longueur )
 
             if ((pizza_embaler.rayon)* 2.54) < minimum_valeur:
