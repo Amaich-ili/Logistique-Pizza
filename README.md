@@ -17,4 +17,4 @@ On affiche les pizzas et les boites
 ### Étape 3:
 On affiche le choix de l’utilisateur par rapport le spécial (2 pour 1).
 ### Étape 4:
-On détermine si la pizza choisie peut être emballer ou non dépend de la boite choisie.
+On détermine si la pizza choisie peut être emballer ou non dépendamment de la boite choisie.
