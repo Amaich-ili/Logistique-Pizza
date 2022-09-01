@@ -48,7 +48,13 @@ class Boite:
         return (f"Boite : {self.aire_boite()} cm")
 
 
+
+def affichage(liste):
+                for index, value in enumerate(liste):
+                    print(f"\t{index + 1}.  {value}")
+
 def menu():
+     
 
     liste_pizza = []
     liste_boite = []
@@ -104,24 +110,19 @@ def menu():
             
             #comparer les aires
             if aire1 > aire2:
-                print("\nVous n'avez pas pris la bonne décision!")
+                print("\nVous n'avez pas pris la bonne décision !!")
             else:
-                print("\nVous avez fait un bon choix !!")
+                print("\nVous avez fait un bon choix :-)")
             
         elif choix == "6" :
 
             print("\nVoici les pizzas disponibles ")
+
             # Afficher la liste des pizzas
-
-            #Évite la répétition de code
-            for index, value in enumerate(liste_pizza):
-                print(f"\t{index + 1}.  {value}")
-
-            print("\nVoici les boites disponibles ")
+            affichage(liste_pizza)
             # Afficher la liste des boites
-            for index, value in enumerate(liste_boite):
-                print(f"\t{index + 1}.  {value}")
-
+            affichage(liste_boite)
+                
             # Demander a l'utilisateur de choisir un pizza et une boite
             pizza_choisi = int(input("\nChoisisez un pizza : "))
             boite_choisi = int(input("Choisisez une boite : "))
