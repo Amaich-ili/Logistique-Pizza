@@ -8,16 +8,24 @@ class Pizza:
         self.diametre = diametre
         self.cout = cout
     
+    #Creer des objets
     def creerpizza(self):
         diametre = int(input("Entrer le diametre on pouces de ton pizza : "))
         cout = int(input("Entrer le cout de ton pizza : "))
         rayon = diametre / 2
         return [rayon, diametre, cout]
+
+    # lister les attributs
+    def liste_attributs(self):
+        return [self.rayon, self.diametre, self.cout]
+
+    #Calculer l'aire de pizza
+    def airpizza(self):
+        return Pizza.PI * (self.rayon)**2
         
+    #Afficher info class
     def __str__(self):
         return (f"Pizza : {(self.diametre)}'' -> {(self.cout)} $")
-
-
 
 
 
@@ -27,12 +35,14 @@ class Boite:
         self.longueur = longueur
         self.largeur = largeur
 
+    #Creer des objets
     def creerboite():
         longueur = float(input("Entrer la longueur on centimetre de la boite : "))
         largeur = float(input("Entrer la largeur on centimetre de la boite : "))
         return [longueur, largeur]
-
-     def __str__(self):
+    
+    #Afficher info class
+    def __str__(self):
         return (f"Boite : {self.airboite()} cm")
 
 
