@@ -74,7 +74,38 @@ def menu():
             for boite in liste_boite:
                 print(boite)
         elif choix == "5" :
-            pass
+             # Afficher la liste des pizzas
+            print("\nVoici les pizzas disponibles ")
+            for index, value in enumerate(liste_pizza):
+                print(f"\t{index + 1}.  {value}")
+            
+            # Demander a li'utilisateur de choisir un pizza
+            pizza_choix = int(input("\nQuel pizza vous voulez ? "))
+            pizza_choisi = liste_pizza[pizza_choix-1]
+            aire1 = pizza_choisi.airpizza()*2
+            
+            # Demander a l'utilisateur de choisir un prix
+            prix = int(input("Entrer un prix parmi la liste : "))
+
+            # Afficher la nouvelle liste des pizzas depend du prix choisi
+            liste_nv = []
+            for i in liste_pizza:
+                if i.cout == prix :
+                    liste_nv.append(i)
+            for element in liste_nv:
+                print(element)
+
+            # Demander a l'utilisateur de choisir un pizza
+            nv_choix = int(input("\nQuel pizza vous voulez ? "))
+            pizza_special = liste_nv[nv_choix-1]
+            aire2 = pizza_special.airpizza()
+            
+            #comparer_aire()
+            if aire1 > aire2:
+                print("Vous n'avez pas pris la bonne décision!")
+            else:
+                print("Vous avez fait un bon choix !!")
+            
         elif choix == "6" :
             pass
 
