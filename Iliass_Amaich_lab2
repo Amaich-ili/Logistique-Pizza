@@ -80,7 +80,7 @@ def menu():
             print("\nVoici les pizzas disponibles ")
             affichage(liste_pizza)
                         
-            # Demander a li'utilisateur de choisir un pizza
+            # Demander a l'utilisateur de choisir un pizza
             pizza_choix = int(input("\nQuel pizza vous voulez ? "))
             pizza_choisi = liste_pizza[pizza_choix-1]
             aire1 = pizza_choisi.aire_pizza()*2
@@ -102,7 +102,7 @@ def menu():
             pizza_special = new_liste[nv_choix-1]
             aire2 = pizza_special.aire_pizza()
             
-            #comparer les aires
+            
             if aire1 > aire2:
                 print("\nVous n'avez pas pris la bonne décision !!")
             else:
