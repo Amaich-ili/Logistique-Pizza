@@ -17,15 +17,13 @@ class Pizza:
         return [rayon, diametre, cout]
 
     # lister les attributs
-    def liste_attributs(self):
-        return [self.rayon, self.diametre, self.cout]
+    #def liste_attributs(self):
+        #return [self.rayon, self.diametre, self.cout]
 
-    #Calculer l'aire de pizza
-    #aire_pizza
-    def airpizza(self):
+    
+    def aire_pizza(self):
         return Pizza.PI * (self.rayon)**2
         
-    #Afficher info class
     def __str__(self):
         return (f"Pizza : {(self.diametre)}'' -> {(self.cout)} $")
 
@@ -43,24 +41,19 @@ class Boite:
         largeur = float(input("Entrer la largeur on centimetre de la boite : "))
         return [longueur, largeur]
 
-    #Calculer aire boite
-    #aire_boite()
-    def airboite(self):
+    def aire_boite(self):
         return self.longueur * self.largeur
     
-    #Afficher info class
     def __str__(self):
-        return (f"Boite : {self.airboite()} cm")
+        return (f"Boite : {self.aire_boite()} cm")
 
 
-# Menu principal
 def menu():
 
-    # instancier liste des pizzas
     liste_pizza = []
-    # instancier liste des boites
     liste_boite = []
     condition = True
+
     while condition:
         choix = input("\n[1] Créer une nouvelle pizza \n[2] Créer une nouvelle boîte \n[3] Voir la liste de pizzas \n[4] Voir la liste de boîtes \n[5] Comparer spécial 2 pour 1 \n[6] Mettre une pizza dans une boîte\nVotre choix : \n")
         
@@ -90,31 +83,30 @@ def menu():
             # Demander a li'utilisateur de choisir un pizza
             pizza_choix = int(input("\nQuel pizza vous voulez ? "))
             pizza_choisi = liste_pizza[pizza_choix-1]
-            aire1 = pizza_choisi.airpizza()*2
+            aire1 = pizza_choisi.aire_pizza()*2
             
             # Demander a l'utilisateur de choisir un prix
             prix = int(input("Entrer un prix parmi la liste : "))
 
             # Afficher la nouvelle liste des pizzas depend du prix choisi
-            liste_nv = []
+            new_liste = []
 
             for pizza in liste_pizza:
                 if pizza.cout == prix :
-                    liste_nv.append(pizza)
-            #Qu'est-ce qu'element représente?
-            for element in liste_nv:
-                print(element)
+                    new_liste.append(pizza)
+            for pizza in new_liste:
+                print(pizza)
 
             # Demander a l'utilisateur de choisir un pizza
             nv_choix = int(input("\nQuel pizza vous voulez ? "))
-            pizza_special = liste_nv[nv_choix-1]
-            aire2 = pizza_special.airpizza()
+            pizza_special = new_liste[nv_choix-1]
+            aire2 = pizza_special.aire_pizza()
             
-            #comparer_aire()
+            #comparer les aires
             if aire1 > aire2:
-                print("Vous n'avez pas pris la bonne décision!")
+                print("\nVous n'avez pas pris la bonne décision!")
             else:
-                print("Vous avez fait un bon choix !!")
+                print("\nVous avez fait un bon choix !!")
             
         elif choix == "6" :
 
@@ -137,8 +129,6 @@ def menu():
             # Reperer le pizza et la boite dans la liste
             pizza_embaler = liste_pizza[pizza_choisi-1]
             boite_embaler = liste_boite[boite_choisi-1]
-            # print(boite_embaler.largeur)
-            # print((pizza_embaler.rayon)*2.54)
 
             if ((pizza_embaler.rayon)* 2.54) < boite_embaler.largeur:
                 print("\nOn peut emballer votre pizza ")
