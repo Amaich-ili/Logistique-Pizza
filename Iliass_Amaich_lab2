@@ -12,14 +12,9 @@ class Pizza:
     @staticmethod
     def creerpizza():
         diametre = int(input("Entrer le diametre on pouces de ton pizza : "))
-        cout = int(input("Entrer le cout de ton pizza : "))
+        prix = int(input("Entrer le cout de ton pizza : "))
         rayon = diametre / 2
-        return [rayon, diametre, cout]
-
-    # lister les attributs
-    #def liste_attributs(self):
-        #return [self.rayon, self.diametre, self.cout]
-
+        return [rayon, diametre, prix]
     
     def aire_pizza(self):
         return Pizza.PI * (self.rayon)**2
@@ -48,14 +43,14 @@ class Boite:
         return (f"Boite : {self.aire_boite()} cm")
 
 
-
+# Afficher les elements de la liste
 def affichage(liste):
-                for index, value in enumerate(liste):
-                    print(f"\t{index + 1}.  {value}")
+    for index, value in enumerate(liste):
+        print(f"\t{index + 1}.  {value}")
+
 
 def menu():
      
-
     liste_pizza = []
     liste_boite = []
     condition = True
@@ -83,9 +78,8 @@ def menu():
 
              # Afficher la liste des pizzas
             print("\nVoici les pizzas disponibles ")
-            for index, value in enumerate(liste_pizza):
-                print(f"\t{index + 1}.  {value}")
-            
+            affichage(liste_pizza)
+                        
             # Demander a li'utilisateur de choisir un pizza
             pizza_choix = int(input("\nQuel pizza vous voulez ? "))
             pizza_choisi = liste_pizza[pizza_choix-1]
@@ -120,6 +114,8 @@ def menu():
 
             # Afficher la liste des pizzas
             affichage(liste_pizza)
+
+            print("\nVoici les boites disponibles ")
             # Afficher la liste des boites
             affichage(liste_boite)
                 
