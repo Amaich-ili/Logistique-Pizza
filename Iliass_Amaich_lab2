@@ -111,7 +111,6 @@ def menu():
         elif choix == "6" :
 
             print("\nVoici les pizzas disponibles ")
-
             # Afficher la liste des pizzas
             affichage(liste_pizza)
 
