@@ -40,7 +40,7 @@ class Boite:
         return self.longueur * self.largeur
     
     def __str__(self):
-        return (f"Boite : {self.aire_boite()} cm")
+        return (f"Boite : {self.longueur} * {self.largeur} cm")
 
 
 # Afficher les elements de la liste
@@ -94,9 +94,8 @@ def menu():
             for pizza in liste_pizza:
                 if pizza.cout == prix :
                     new_liste.append(pizza)
-            for pizza in new_liste:
-                print(pizza)
-
+            affichage(new_liste)
+            
             # Demander a l'utilisateur de choisir un pizza
             nv_choix = int(input("\nQuel pizza vous voulez ? "))
             pizza_special = new_liste[nv_choix-1]
@@ -104,9 +103,9 @@ def menu():
             
             
             if aire1 > aire2:
-                print("\nVous n'avez pas pris la bonne décision !!")
+                print("\nVous n'avez pas pris la bonne décision !! Sera mieux de prendre le special")
             else:
-                print("\nVous avez fait un bon choix :-)")
+                print("\nVous avez fait un bon choix :-) tu as bien profite du special ")
             
         elif choix == "6" :
 
