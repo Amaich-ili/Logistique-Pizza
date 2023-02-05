@@ -1,6 +1,10 @@
-# Laboratoire2
+# Gestion Logistique Pizza
+
+## Description
 
 Un logiciel de logistique pour une compagnie de pizza.
+
+## Utilisation
 Ce programme est constitué de deux classes Pizza et Boite. On interroge l'utilisateur à travers un menu qui est constitué de 6 options.
 
     1.	Créer une nouvelle pizza 
@@ -18,3 +22,6 @@ On affiche les pizzas et les boites
 On affiche le choix de l’utilisateur par rapport le spécial (2 pour 1).
 ### Étape 4:
 On détermine si la pizza choisie peut être emballer ou non dépendamment de la boite choisie.
+
+## Support
+Iliass Amaich iliamaich@gmail.com
